@@ -14,14 +14,13 @@ function viewToken() {
       color: 'red',
     },
     style2: {
-      background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)'
+      background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)',
+      margin: '20px',
+      padding: '20px',
+      width: '100%'
     }
   }
-  const bclassNames = {
-    className1: 'm-1 w-100',
-    className2: 'm-1 w-50'
-  }
-
+  
   return (
     <>
     <div className='row m-4'>
@@ -33,10 +32,10 @@ function viewToken() {
           <Container fluid>
             <Row gutterX='3'>
                 <Col>
-                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles={bstyles.style2} className={bclassNames.className1}/>
+                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles={bstyles.style2} />
                 </Col>
                 <Col>
-                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles={bstyles.style2} className={bclassNames.className1}/>
+                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles={bstyles.style2} />
                 </Col>
             </Row>
           </Container>

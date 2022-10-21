@@ -10,7 +10,8 @@ function generateToken() {
       color: 'red',
     },
     style2: {
-      background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)'
+      background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)',
+      margin: ''
     }
   }
   const bclassNames = {
