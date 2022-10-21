@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Container, Col, Button, Row} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import WelcomeImg from "../../assets/images/welcome_Image.png";
-import './Welcome.css';
+import styles from './Welcome.module.css';
 
 function Welcome() {
     const navigate = useNavigate();
@@ -26,16 +26,16 @@ function Welcome() {
                         <Col>
                             <Card onClick={genToken} style={{ cursor: "pointer" }}>
                                 <Card.Body>
-                                    <Card.Title className='card-title'>Generate Token</Card.Title>
-                                    <Card.Text className='card-text'>Generate Token to connect your system with the DIVOC Platform</Card.Text>
+                                    <Card.Title className={styles['card-title']}>Generate Token</Card.Title>
+                                    <Card.Text className={styles['card-text']}>Generate Token to connect your system with the DIVOC Platform</Card.Text>
                                 </Card.Body>
                             </Card> 
                         </Col>
                         <Col>
                             <Card onClick={manageSchema} style={{ cursor: "pointer" }}>
                                 <Card.Body>
-                                    <Card.Title className='card-title'>Manage Schema</Card.Title>
-                                    <Card.Text className='card-text'>Create new schemas, View/Edit existing schemas</Card.Text>
+                                    <Card.Title className={styles['card-title']}>Manage Schema</Card.Title>
+                                    <Card.Text className={styles['card-text']}>Create new schemas, View/Edit existing schemas</Card.Text>
                                 </Card.Body>
                             </Card> 
                         </Col>

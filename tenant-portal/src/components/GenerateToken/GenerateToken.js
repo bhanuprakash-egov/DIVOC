@@ -2,11 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GenTokenImg from "../../assets/images/generate_viewToken.png";
 import GenericButton from '../GenericButton/GenericButton';
-import { Row } from 'react-bootstrap';
-import './GenerateToken.css'
+import styles from './GenerateToken.module.css';
 
 function generateToken() {
-  const styles = {
+  const bstyles = {
     style1: {
       color: 'red',
     },
@@ -14,24 +13,19 @@ function generateToken() {
       background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)'
     }
   }
-  const classNames = {
+  const bclassNames = {
     className1: 'm-1 w-100',
     className2: 'm-1 w-50'
   }
   return (
     <div className='row m-4 p-4'>
         <div className='col-md-6 p-2'>
-            <div className='title'>Connect your system with the DIVOC Platform</div>
-            <div className='text'>
+            <div className={styles['title']}>Connect your system with the DIVOC Platform</div>
+            <div className={styles['text']}>
                 <p>You need to connect to your system with the DIVOC platform to start issuing verifiable credentials.</p>
                 <p>Click on the button below to generate the token to connect your system with DIVOC</p>
-            </div>
-            <GenericButton img='' text='Generate Token' type='primary' styles={styles.style1} className={classNames.className1}/>
-            <Row>
-            <GenericButton img='' text='Generate Token' type='secondary' styles={styles.style2} className={classNames.className2}/>
-            </Row>
-            <GenericButton img='' text='Generate Token' type='success' className={classNames.className1} />
-            <GenericButton img='' text='Generate Token' type='tertiary' styles={styles.style1} />
+            </div>            
+            <GenericButton img='' text='Generate Token' type='secondary' styles={bstyles.style2} className={bclassNames.className1}/>
         </div>
         <img src={GenTokenImg} alt="Generate Token Image" className="col-md-6"/>
     </div>

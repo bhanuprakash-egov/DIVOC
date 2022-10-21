@@ -1,0 +1,12 @@
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #639CD1 !important;
+}
+
+.card-text {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #639CD1 !important;
+}

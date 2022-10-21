@@ -6,10 +6,10 @@ import CopyIcon from "../../assets/images/copyIcon.png";
 import DownloadIcon from "../../assets/images/downloadIcon.png";
 import GenericButton from '../GenericButton/GenericButton';
 import { Container, Card, Col, Row} from 'react-bootstrap';
-import "./ViewToken.css";
+import styles from "./ViewToken.module.css";
 
 function viewToken() {
-  const styles = {
+  const bstyles = {
     style1: {
       color: 'red',
     },
@@ -17,7 +17,7 @@ function viewToken() {
       background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)'
     }
   }
-  const classNames = {
+  const bclassNames = {
     className1: 'm-1 w-100',
     className2: 'm-1 w-50'
   }
@@ -33,32 +33,16 @@ function viewToken() {
           <Container fluid>
             <Row gutterX='3'>
                 <Col>
-                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles={styles.style2} className={classNames.className1}/>
+                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles={bstyles.style2} className={bclassNames.className1}/>
                 </Col>
                 <Col>
-                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles={styles.style2} className={classNames.className1}/>
-                </Col>
-            </Row>
-            <Row gutterX='3'>
-                <Col>
-                  <GenericButton img={CopyIcon} text='Copy'  styles={styles.style2} />
-                </Col>
-                <Col>
-                  <GenericButton img={DownloadIcon} text='Download' type='' styles={styles.style2} />
-                </Col>
-            </Row>
-            <Row gutterX='3'>
-                <Col>
-                  <GenericButton img='' text='Copy' type='outline-primary' styles={styles.style1} />
-                </Col>
-                <Col>
-                  <GenericButton text='Download' type='outline-success'  />
+                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles={bstyles.style2} className={bclassNames.className1}/>
                 </Col>
             </Row>
           </Container>
-          <Card >
-            <Card.Title><span><img src={AlertIcon} alt="Alert Icon"/></span> Alert!</Card.Title>
-            <Card.Text className='card-text'>
+          <Card className='p-3'>
+            <Card.Title className={styles['card-title']}><span><img src={AlertIcon} alt="Alert Icon"/></span> Alert!</Card.Title>
+            <Card.Text className={styles['card-text']}>
             Make sure to store this safely. Once you leave this page, you will not be able to access this token again.
             <br /><strong>This token is valid for 1 year.</strong>
             </Card.Text>
