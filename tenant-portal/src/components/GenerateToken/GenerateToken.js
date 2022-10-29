@@ -11,7 +11,8 @@ function generateToken() {
     },
     style2: {
       background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)',
-      margin: ''
+      margin: '',
+      width: '100%'
     }
   }
   const bclassNames = {

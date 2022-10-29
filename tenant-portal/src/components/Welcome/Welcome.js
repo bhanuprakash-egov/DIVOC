@@ -14,7 +14,7 @@ function Welcome() {
         navigate('/tenant-portal/vcwelcome');
     };
     return(
-        <div className="row m-4">
+        <div className="row mx-5 px-5">
             <div className="col-md-6">
                 <div className="p-2">
                     <h2>Welcome to DIVOC VC Issuance platform</h2><br/>

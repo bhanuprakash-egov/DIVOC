@@ -15,7 +15,7 @@ function viewToken() {
     },
     style2: {
       background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)',
-      margin: '20px',
+      marginTop: '20px',
       padding: '20px',
       width: '100%'
     }
