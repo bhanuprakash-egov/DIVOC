@@ -5,10 +5,29 @@ import AlertIcon from "../../assets/images/alertIcon.png";
 import CopyIcon from "../../assets/images/copyIcon.png";
 import DownloadIcon from "../../assets/images/downloadIcon.png";
 import GenericButton from '../GenericButton/GenericButton';
-import { Container, Card, Col, Row} from 'react-bootstrap';
+import { Container, Card, Col, Row, Form} from 'react-bootstrap';
 import styles from "./ViewToken.module.css";
 
+
 function viewToken() {
+  function copyToken() {
+    var copyText = document.getElementById("token");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied the token: " + copyText.value);
+  }
+
+  const downloadToken = () => {
+    const element = document.createElement("a");
+    const file = new Blob([document.getElementById('token').value],    
+                {type: 'text/plain;charset=utf-8'});
+    element.href = URL.createObjectURL(file);
+    element.download = "myToken.txt";
+    document.body.appendChild(element);
+    element.click();
+  }
+  
   const bstyles = {
     style2: {
       background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)',
@@ -23,14 +42,16 @@ function viewToken() {
           <h2>Connect your system with the DIVOC Platform</h2>
           <div>Please find the token generated below.</div> 
           <div>You can copy it to the clipboard or download the same</div>
-          <div>***Generated token will be here***</div>
+          <Form.Control size="lg" type="text" readOnly id='token' defaultValue="@sample*generated#token^" />
+          <button onClick={()=>copyToken()}> Test Copy </button>
+          <button onClick={downloadToken}> Test Download </button>
           <Container fluid>
             <Row gutterX='3'>
                 <Col>
-                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles='' />
+                  <GenericButton img={CopyIcon} text='Copy' type='primary' />
                 </Col>
                 <Col>
-                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles='' />
+                  <GenericButton img={DownloadIcon} text='Download' type='primary' />
                 </Col>
             </Row>
           </Container>

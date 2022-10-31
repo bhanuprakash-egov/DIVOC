@@ -20,7 +20,7 @@ function generateToken() {
                 <p>You need to connect to your system with the DIVOC platform to start issuing verifiable credentials.</p>
                 <p>Click on the button below to generate the token to connect your system with DIVOC</p>
             </div>            
-            <GenericButton img='' text='Generate Token' type='primary' styles=''/>
+            <GenericButton img='' text='Generate Token' type='primary' />
         </div>
         <img src={GenTokenImg} alt="Generate Token Image" className="col-md-6"/>
     </div>

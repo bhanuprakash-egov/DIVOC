@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GenericButton = (props) => {
   return (
-        <Button variant={props.type} style={props.styles} className='w-50'>
+        <Button variant={props.type} style={props.styles} className='w-100'>
             <img src={props.img} alt="" className={(props.img ? 'me-3': '')}/><strong>{props.text}</strong>
         </Button>
   )
