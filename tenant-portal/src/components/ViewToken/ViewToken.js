@@ -10,32 +10,27 @@ import styles from "./ViewToken.module.css";
 
 function viewToken() {
   const bstyles = {
-    style1: {
-      color: 'red',
-    },
     style2: {
       background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)',
-      marginTop: '20px',
-      padding: '20px',
-      width: '100%'
+      width: ''
     }
   }
   
   return (
     <>
-    <div className='row m-4'>
+    <div className='row mx-5 px-5'>
         <div className='col-md-6'>
           <h2>Connect your system with the DIVOC Platform</h2>
-          <p>Please find the token generated below.</p> 
-          <p>You can copy it to the clipboard or download the same</p>
+          <div>Please find the token generated below.</div> 
+          <div>You can copy it to the clipboard or download the same</div>
           <div>***Generated token will be here***</div>
           <Container fluid>
             <Row gutterX='3'>
                 <Col>
-                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles={bstyles.style2} />
+                  <GenericButton img={CopyIcon} text='Copy' type='primary' styles='' />
                 </Col>
                 <Col>
-                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles={bstyles.style2} />
+                  <GenericButton img={DownloadIcon} text='Download' type='primary' styles='' />
                 </Col>
             </Row>
           </Container>

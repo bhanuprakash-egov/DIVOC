@@ -1,11 +1,15 @@
 .title {
+    padding: 20px 0px;
     font-weight: 700;
     font-size: 28px;
     color: #000000;
 }
 
 .text {
+    padding:20px 0px;
     font-weight: 400;
     font-size: 16px;
-    color: #484646;
+    color: #c21a1a;
+    width: 80%;
+    float: left;
 }
