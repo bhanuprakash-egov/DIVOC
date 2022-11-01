@@ -39,25 +39,23 @@ function viewToken() {
     <>
     <div className='row mx-5 px-5'>
         <div className='col-md-6'>
-          <h2>Connect your system with the DIVOC Platform</h2>
-          <div>Please find the token generated below.</div> 
-          <div>You can copy it to the clipboard or download the same</div>
-          <Form.Control size="lg" type="text" readOnly id='token' defaultValue="@sample*generated#token^" />
-          <button onClick={()=>copyToken()}> Test Copy </button>
-          <button onClick={downloadToken}> Test Download </button>
-          <Container fluid>
+          <h2 className='my-3'>Connect your system with the DIVOC Platform</h2>
+          <div className='my-3'>Please find the token generated below.</div> 
+          <div >You can copy it to the clipboard or download the same</div>
+          <Form.Control className='my-3' size="lg" type="text" readOnly id='token' defaultValue="@sample*generated#token^" />
+          <Container fluid className='my-3'>
             <Row gutterX='3'>
                 <Col>
-                  <GenericButton img={CopyIcon} text='Copy' type='primary' />
+                  <GenericButton img={CopyIcon} text='Copy' type='primary' onClick={copyToken} />
                 </Col>
                 <Col>
-                  <GenericButton img={DownloadIcon} text='Download' type='primary' />
+                  <GenericButton img={DownloadIcon} text='Download' type='primary' onClick={downloadToken} />
                 </Col>
             </Row>
           </Container>
-          <Card className='p-3'>
-            <Card.Title className={styles['card-title']}><span><img src={AlertIcon} alt="Alert Icon"/></span> Alert!</Card.Title>
-            <Card.Text className={styles['card-text']}>
+          <Card className='p-3 my-3 text-info'>
+            <Card.Title ><span><img src={AlertIcon} alt="Alert Icon"/></span> Alert!</Card.Title>
+            <Card.Text >
             Make sure to store this safely. Once you leave this page, you will not be able to access this token again.
             <br /><strong>This token is valid for 1 year.</strong>
             </Card.Text>

@@ -1,4 +1,4 @@
 .btn-primary {
-    background-color: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)';
+    background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)';
     width: 100%;
 }
