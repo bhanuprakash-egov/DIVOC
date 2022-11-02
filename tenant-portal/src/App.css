@@ -2,3 +2,24 @@
     background: 'linear-gradient(270deg, #5367CA 0%, #73BAF4 100%)';
     width: 100%;
 }
+
+.card-alertCard {
+    color: #639CD1;
+    background-color: #F2F9FF;
+}
+
+/* .info-card {
+    color : blue;
+}
+
+.info-card .alert-body {
+
+}
+
+.danger-card {
+
+}
+
+.danger-card .alert-body {
+
+} */

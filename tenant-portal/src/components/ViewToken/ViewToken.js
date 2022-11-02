@@ -7,6 +7,7 @@ import DownloadIcon from "../../assets/images/downloadIcon.png";
 import GenericButton from '../GenericButton/GenericButton';
 import { Container, Card, Col, Row, Form} from 'react-bootstrap';
 import styles from "./ViewToken.module.css";
+import InfoCard from '../InfoCard/InfoCard';
 
 
 function viewToken() {
@@ -18,7 +19,7 @@ function viewToken() {
     alert("Copied the token: " + copyText.value);
   }
 
-  const downloadToken = () => {
+  function downloadToken() {
     const element = document.createElement("a");
     const file = new Blob([document.getElementById('token').value],    
                 {type: 'text/plain;charset=utf-8'});
@@ -40,7 +41,7 @@ function viewToken() {
     <div className='row mx-5 px-5'>
         <div className='col-md-6'>
           <h2 className='my-3'>Connect your system with the DIVOC Platform</h2>
-          <div className='my-3'>Please find the token generated below.</div> 
+          <div className='mt-3'>Please find the token generated below.</div> 
           <div >You can copy it to the clipboard or download the same</div>
           <Form.Control className='my-3' size="lg" type="text" readOnly id='token' defaultValue="@sample*generated#token^" />
           <Container fluid className='my-3'>
@@ -53,13 +54,7 @@ function viewToken() {
                 </Col>
             </Row>
           </Container>
-          <Card className='p-3 my-3 text-info'>
-            <Card.Title ><span><img src={AlertIcon} alt="Alert Icon"/></span> Alert!</Card.Title>
-            <Card.Text >
-            Make sure to store this safely. Once you leave this page, you will not be able to access this token again.
-            <br /><strong>This token is valid for 1 year.</strong>
-            </Card.Text>
-          </Card>
+          <InfoCard icon={AlertIcon} className='alertCard' title="Alert!" text="something somthing" impText=" something important" />
           </div>
         <img src={ViewTokenImg} alt="View Token Image" className="col-md-6"/>
         </div>
