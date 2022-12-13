@@ -7,14 +7,30 @@ import addVector from "../../assets/img/add-vector.svg";
 import uploadVector from "../../assets/img/upload-vector.svg";
 import {  Card, Col, Container , Image, Row, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import JsonUpload from "../JsonUpload/JsonUpload";
 
 function CreateSchema(){
     const { t } = useTranslation();
 
-    const [schemaDetails, setSchemaDetails] = useState(false);
+    const [createSchemaInitialized, setCreateSchemaInitialized] = useState(false);
+    const [manuallyCreateSchema, setManuallyCreateSchema] = useState(false);
+    const [jsonUploadSchema, setJsonUploadSchema] = useState(false);
+
+    function initManuallyCreateSchema() {
+        setCreateSchemaInitialized(true);
+        setManuallyCreateSchema(true);
+        setJsonUploadSchema(false);
+    }
+
+    function initJsonUploadCreateSchema() {
+        setCreateSchemaInitialized(true);
+        setJsonUploadSchema(true);
+        setManuallyCreateSchema(false);
+    }
+
 return (
 <div>
-    { !schemaDetails && <div>
+    { !createSchemaInitialized && <div>
         <Container fluid="md" className="py-4">
             <Row className="justify-content-between px-5" >
                 <Col md={5} >
@@ -51,7 +67,8 @@ return (
             </Row>               
         </Container>
     </div>}
-    {schemaDetails && <div><SchemaDetails/></div>}
+    {createSchemaInitialized && manuallyCreateSchema && <div><SchemaDetails/></div>}
+    {createSchemaInitialized && jsonUploadSchema && <div><JsonUpload/></div>}
     
 </div>
 );

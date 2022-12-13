@@ -1,0 +1,31 @@
+diff a/tenant-portal/src/components/CreateSchema/CreateSchema.js b/tenant-portal/src/components/CreateSchema/CreateSchema.js	(rejected hunks)
+@@ -24,7 +40,7 @@
+                         <Col>{t('createSchema.view')} <Link to={''} className="text-decoration-none">{t('createSchema.trainingMaterial')}</Link> {t('createSchema.or')} <Link to={''} class="text-decoration-none">{t('createSchema.videosLink')}</Link></Col>
+                         <Row xs={1} sm={2} className="pt-4">
+                             <Col>
+-                                <Card className="card" onClick={() => setSchemaDetails(true)}>
++                                <Card className="card" onClick={initManuallyCreateSchema}>
+                                     <Card.Body className="">
+                                         <Card.Title className="text-center"><Image src={addVector}/></Card.Title>
+                                         <Card.Text className="card-text">{t('createSchema.addText')}</Card.Text>
+@@ -32,14 +48,12 @@
+                                 </Card> 
+                             </Col>
+                             <Col>
+-                                <Link to={''} className="text-decoration-none">
+-                                    <Card  className="card">
+-                                        <Card.Body className="">
+-                                            <Card.Title className="text-center"><Image src={uploadVector}/></Card.Title>
+-                                            <Card.Text className="card-text">{t('createSchema.uploadText')}</Card.Text>
+-                                        </Card.Body>
+-                                    </Card> 
+-                                </Link>
++                                <Card  className="card" onClick={initJsonUploadCreateSchema}>
++                                    <Card.Body className="">
++                                        <Card.Title className="text-center"><Image src={uploadVector}/></Card.Title>
++                                        <Card.Text className="card-text">{t('createSchema.uploadText')}</Card.Text>
++                                    </Card.Body>
++                                </Card>
+                             </Col>
+                         </Row>
+                     </Stack>

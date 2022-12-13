@@ -65,5 +65,13 @@
         "videosLink": "Videos",
         "addText": "Add Manually",
         "uploadText": "Upload JSON"
+    },
+    "jsonSchemaUpload": {
+        "title": "Upload JSON",
+        "uploadComment1": "Drag and drop files to upload",
+        "uploadComment2": "Select files to upload",
+        "or": "or",
+        "draftButtonText": "Save as draft",
+        "saveButtonText": "Save & Next"
     }
 }
