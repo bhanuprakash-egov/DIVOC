@@ -15,6 +15,7 @@ function CreateSchema(){
     const [createSchemaInitialized, setCreateSchemaInitialized] = useState(false);
     const [manuallyCreateSchema, setManuallyCreateSchema] = useState(false);
     const [jsonUploadSchema, setJsonUploadSchema] = useState(false);
+    const [jsonUploadStatus, setJsonUploadStatus] = useState("");
 
     function initManuallyCreateSchema() {
         setCreateSchemaInitialized(true);
@@ -40,7 +41,7 @@ return (
                         <Col>{t('createSchema.view')} <Link to={''} className="text-decoration-none">{t('createSchema.trainingMaterial')}</Link> {t('createSchema.or')} <Link to={''} class="text-decoration-none">{t('createSchema.videosLink')}</Link></Col>
                         <Row xs={1} sm={2} className="pt-4">
                             <Col>
-                                <Card className={styles['card']} onClick={() => initManuallyCreateSchema}>
+                                <Card className={styles['card']} onClick={initManuallyCreateSchema}>
                                     <Card.Body className="">
                                         <Card.Title className="text-center"><Image src={addVector}/></Card.Title>
                                         <Card.Text className={styles["card-text"]}>{t('createSchema.addText')}</Card.Text>
@@ -49,7 +50,7 @@ return (
                             </Col>
                             <Col>
                                 <Link to={''} className="text-decoration-none">
-                                    <Card  className={styles['card']}  onClick={() => initJsonUploadCreateSchema}>
+                                    <Card  className={styles['card']}  onClick={initJsonUploadCreateSchema}>
                                         <Card.Body className="">
                                             <Card.Title className="text-center"><Image src={uploadVector}/></Card.Title>
                                             <Card.Text className={styles["card-text"]}>{t('createSchema.uploadText')}</Card.Text>
@@ -67,8 +68,8 @@ return (
             </Row>               
         </Container>
     </div>}
-    {createSchemaInitialized && manuallyCreateSchema && <div><SchemaDetails/></div>}
-    {createSchemaInitialized && jsonUploadSchema && <div><JsonUpload/></div>}
+    { createSchemaInitialized && manuallyCreateSchema && <div><SchemaDetails/></div>}
+    { createSchemaInitialized && jsonUploadSchema && <div><JsonUpload/></div>}
     
 </div>
 );
